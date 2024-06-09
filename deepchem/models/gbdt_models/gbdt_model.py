@@ -76,7 +76,7 @@ class GBDTModel(SklearnModel):
         elif self.model.__class__.__name__.startswith('LGBM'):
             self.callbacks = [
                 lightgbm.early_stopping(
-                    stopping_rounds=self.early_stopping_rounds),
+                    stopping_rounds=self.early_stopping_rounds)
             ]
 
         if eval_metric is None:
